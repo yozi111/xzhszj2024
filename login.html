@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登陆</title>
+<link rel="stylesheet" href="css/login.css">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+</head>
+<body>
+    <!--top顶层-->
+    <table width="1510" height="600" border="0">
+        <tbody>
+            <tr>
+                <td background="img/bg.png">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top: 10px; text-align: center; vertical-align: middle;">
+                        <tbody>
+                            <tr>
+                                <td style="width: 20px; text-align: center; vertical-align: middle;"></td>
+                                <td style="width: 300px; height: auto; padding: 10px; text-align: center; vertical-align: middle;">
+                                     <a href="index.html"><img src="img/logo_2.png"></a>
+                                </td>
+                                <td style="width: 700px; text-align: center; vertical-align: middle;"></td>
+                                <td style="width: 100px; text-align: center; vertical-align: middle;">
+                                    <a href="message-hero.html" style="font-size: 16px; font-weight: bold; color: #FFFFFF; text-decoration: none;">致敬英雄</a>
+              </td>
+              <td style="width: 100px; text-align: center; vertical-align: middle;">
+                <a href="message.html" style="font-size: 16px; font-weight: bold; color: #FFFFFF; text-decoration: none;">&nbsp; &nbsp;联系我们&nbsp; &nbsp;</a>
+                                </td>
+                                <td style="width: 100px; text-align: center; vertical-align: middle;">
+                <a href="login.html"><img src="img/button1.png"></a>
+              </td>
+              <td style="width: 100px; text-align: center; vertical-align: middle;">
+                <a href="login.html"><img src="img/button2.png"></a>
+              </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <main>
+        <div class="login-box">
+            <div class="login-form form-container">
+                <h2>账号密码登录</h2>
+                <form id="loginForm">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" placeholder="请输入用户名" required>
+                    
+                    <label for="password">密码</label>
+                    <input type="password" id="password" placeholder="请输入密码" required>
+                    
+                    <button type="submit">登录</button>
+                </form>
+                <p class="toggle-link" id="showRegister">没有账号？点击这里注册</p>
+            </div>
+
+            <div class="register-form form-container" id="registerForm">
+                <h2>用户注册</h2>
+                <form id="registrationForm">
+                    <label for="regUsername">用户名</label>
+                    <input type="text" id="regUsername" placeholder="请输入用户名" required>
+                    
+                    <label for="regPassword">密码</label>
+                    <input type="password" id="regPassword" placeholder="请输入密码" required>
+                    
+                    <button type="submit">注册</button>
+                </form>
+                <p class="toggle-link" id="showLogin">已有账号？点击这里登录</p>
+            </div>
+        </div>
+<script>
+    $(document).ready(function() {
+        // 显示注册表单
+        $('#showRegister').click(function() {
+            $('.login-form').hide();
+            $('#registerForm').show();
+        });
+
+        // 显示登录表单
+        $('#showLogin').click(function() {
+            $('.login-form').show();
+            $('#registerForm').hide();
+        });
+
+        // 登录表单提交事件
+        $('#loginForm').submit(function(event) {
+            event.preventDefault();
+            var username = $('#username').val();
+            var password = $('#password').val();
+
+            // 获取存储在 localStorage 中的注册用户名和密码
+            var storedUsername = localStorage.getItem('registeredUsername');
+            var storedPassword = localStorage.getItem('registeredPassword');
+
+            // 检查输入的用户名和密码是否与注册信息匹配
+            if (username === storedUsername && password === storedPassword) {
+                alert('登录成功');
+                window.location.href = 'index1.html'; // 跳转到首页
+            } else {
+                alert('用户名或密码错误');
+            }
+        });
+
+        // 注册表单提交事件
+        $('#registrationForm').submit(function(event) {
+            event.preventDefault();
+            var regUsername = $('#regUsername').val();
+            var regPassword = $('#regPassword').val();
+
+            // 保存注册的用户名和密码到 localStorage
+            localStorage.setItem('registeredUsername', regUsername);
+            localStorage.setItem('registeredPassword', regPassword);
+
+            alert('注册成功，请使用新账号登录');
+            $('#registerForm').hide();
+            $('.login-form').show();
+        });
+    });
+</script>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <table width="1510" height="150" bgcolor="#ab1d22" border="0" background="img/bottom.png"></table>
+    </footer>
+</body>
+</html>

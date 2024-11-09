@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+.inform-bar {
+    background-color: #fdf4f4; 
+    padding: 15px;
+    border-radius: 12px;
+    position: relative; 
+	width:1365px;
+	margin-left: 60px;
+	height: 110px;
+	margin-top: 120px;
+}
+
+.inform-bar h3 {
+    color: #d33; 
+    font-weight: bold;
+    margin-left:20px;
+	font-size: 20px;
+}
+.inform-content {
+    display: flex;
+    gap: 100px;
+	width: 85%;
+	margin-left: 20px;
+	
+}
+.inform-content ul {
+    list-style: none;
+    padding: 0;
+	justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex: 1;
+}
+.inform-content li {
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+    font-size: 14px;
+    margin: 5px 0;
+	line-height: 2; 
+}
+.inform-content a .left {
+    margin-right: 200px;
+}
+.inform-content a .right {
+    margin-left: 100px;
+}
+.inform-bar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.inform-bar a:hover {
+    text-decoration: underline;
+}
+
+.inform-bar .more-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: #d33;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.inform-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.inform-bar li {
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+    font-size: 14px;
+    margin: 5px 0;
+	border-bottom: 1px solid #ddd;
+	word-wrap: break-word; 
+    word-break: break-all; 
+}
+
+.inform-bar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.inform-bar a:hover {
+    text-decoration: underline;
+}
+
+.inform-bar .more-btn {
+    position: absolute;
+    right: 50px;
+    bottom: 27px;
+    background-color: #d33; /* Red color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

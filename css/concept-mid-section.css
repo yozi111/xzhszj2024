@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+.concept-mid-section {
+  display: flex;
+	 flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+	 gap: 40px; 
+padding-left: 360px; 
+}
+
+.concept-mid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.concept-mid-item .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.concept-mid-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.concept-mid-text p {
+	width: 100%;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 550px;
+	height: auto;
+}
+.concept-mid-text strong {
+            font-weight: bold;     
+            color: #000000;      
+        }
+.concept-mid-text {
+text-align: left;
+}
+

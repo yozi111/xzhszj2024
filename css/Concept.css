@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* CSS Document */
+.content {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.left-sidebar {
+  width: 20%;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.left-sidebar h2 {
+  font-size: 1.2em;
+  color: #D60000;
+}
+
+.left-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-sidebar li {
+  padding: 5px 0;
+}
+
+.main-news {
+  width: 75%;
+  margin-left: 5%;
+}
+
+.main-news h2 {
+  color: #D60000;
+}
+
+.news-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.news-item h3 {
+  color: #333;
+  font-weight: bold;
+}
+
+.news-item p {
+  color: #666;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px 0;
+}
+
+.pagination a {
+    margin: 0 5px;
+    color: #D60000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+.pagination a.active {
+    color:#0100FF; 
+    border-bottom: 2px solid #ab1d22;
+}
+
+.pagination a.disabled {
+    color: #999;
+    pointer-events: none;
+}
+
+.concept-section {
+  max-width: 1200px;
+  padding: 20px;
+  margin-top: 120px;
+  position: relative;
+  padding-left: 220px; 
+}
+
+.concept-item {
+  position: relative; 
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 200px;
+	margin-left: 150px;
+}
+
+.concept-node {
+  position: absolute;
+  left: -20px;
+  top: 50%; 
+  transform: translateY(-50%);
+  width: 20px; 
+  height: 20px; 
+  background-color: #ab1d22; 
+  border-radius: 50%; 
+	
+}
+
+.concept-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: -10px; 
+  top: 260px; 
+  transform: translateY(-50%);
+  bottom: 0; 
+  width: 4px; 
+height: 530px;
+  background-color: #ab1d22; 
+
+}
+
+.concept-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.concept-text {
+  flex: 1;
+  padding: 20px;
+}
+.concept-item .title {
+  font-size: 22px;
+  margin-bottom: 12px;
+  position: relative;
+  color: #000000;
+font-weight: bold;
+}
+.concept-text p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.concept-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.concept-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .concept-item,
+  .concept-item.reverse {
+    flex-direction: column;
+  }
+  
+  .concept-text, .concept-image {
+    padding: 10px;
+  }
+}

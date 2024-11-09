@@ -1,0 +1,22 @@
+.carousel-container {
+  overflow: hidden;
+  height: 30px; /* 设置容器高度 */
+  width: 200px; /* 设置容器宽度 */
+}
+.carousel {
+  display: flex;
+  flex-direction: column;
+  animation: slide 6s linear infinite;
+}
+.carousel div {
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+}
+/* 定义动画效果 */
+@keyframes slide {
+  0% { transform: translateY(0); }
+  33% { transform: translateY(-30px); } /* 每个文字块高度 */
+  66% { transform: translateY(-60px); }
+  100% { transform: translateY(-90px); }
+}

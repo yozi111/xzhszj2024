@@ -1,0 +1,17 @@
+
+  .model-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+  }
+ .model-img img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.7s ease; 
+  }
+ .model-img img:hover {
+    transform: scale(1.5); 
+    cursor: pointer; 
+  }
